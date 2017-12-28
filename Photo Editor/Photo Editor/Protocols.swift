@@ -23,10 +23,6 @@ public protocol PhotoEditorDelegate {
      StickersViewController did Disappear
      */
     func canceledEditing()
-    
-    func shViewControllerImageDidFilter(image: UIImage)
-    
-    func shViewControllerDidCancel()
 }
 
 

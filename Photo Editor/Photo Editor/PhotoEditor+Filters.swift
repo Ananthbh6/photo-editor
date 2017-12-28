@@ -50,14 +50,14 @@ extension PhotoEditorViewController {
     
     @objc @IBAction func closeButtonTapped() {
         if let delegate = self.photoEditorDelegate {
-            delegate.shViewControllerDidCancel()
+            delegate.canceledEditing()
         }
         dismiss(animated: true, completion: nil)
     }
     
     @objc @IBAction func doneButtontapped() {
         if let delegate = self.photoEditorDelegate {
-            delegate.shViewControllerImageDidFilter(image: (imageView?.image)!)
+            delegate.doneEditing(image: imageView.image!)
         }
         dismiss(animated: true, completion: nil)
     }
