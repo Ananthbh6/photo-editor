@@ -56,17 +56,17 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="n3p-yR-4xc" firstAttribute="centerY" secondItem="5rw-9v-ExQ" secondAttribute="centerY" id="0QX-a7-mia"/>
-                        <constraint firstItem="5rw-9v-ExQ" firstAttribute="centerX" secondItem="S1Y-ZS-dct" secondAttribute="centerX" id="2oa-57-UUp"/>
                         <constraint firstAttribute="trailing" secondItem="5rw-9v-ExQ" secondAttribute="trailing" id="EPV-Q8-h8f"/>
-                        <constraint firstItem="n3p-yR-4xc" firstAttribute="centerX" secondItem="5rw-9v-ExQ" secondAttribute="centerX" id="Her-VZ-Dem"/>
                         <constraint firstItem="n3p-yR-4xc" firstAttribute="height" secondItem="5rw-9v-ExQ" secondAttribute="height" id="JzM-Mx-Dfz"/>
-                        <constraint firstItem="5rw-9v-ExQ" firstAttribute="centerY" secondItem="S1Y-ZS-dct" secondAttribute="centerY" id="KyP-cQ-CLv"/>
                         <constraint firstItem="5rw-9v-ExQ" firstAttribute="height" secondItem="S1Y-ZS-dct" secondAttribute="height" id="L1c-CS-qil"/>
+                        <constraint firstItem="n3p-yR-4xc" firstAttribute="top" secondItem="5rw-9v-ExQ" secondAttribute="top" id="RLP-7V-KBP"/>
                         <constraint firstItem="5rw-9v-ExQ" firstAttribute="top" secondItem="S1Y-ZS-dct" secondAttribute="top" priority="750" id="asb-iT-RHl"/>
+                        <constraint firstItem="n3p-yR-4xc" firstAttribute="trailing" secondItem="5rw-9v-ExQ" secondAttribute="trailing" id="cvL-PA-cKS"/>
                         <constraint firstAttribute="bottom" secondItem="5rw-9v-ExQ" secondAttribute="bottom" priority="750" id="gN9-UZ-cen"/>
                         <constraint firstItem="n3p-yR-4xc" firstAttribute="width" secondItem="5rw-9v-ExQ" secondAttribute="width" id="n8M-D5-EAA"/>
                         <constraint firstItem="5rw-9v-ExQ" firstAttribute="leading" secondItem="S1Y-ZS-dct" secondAttribute="leading" id="v73-ro-BkR"/>
+                        <constraint firstItem="n3p-yR-4xc" firstAttribute="bottom" secondItem="5rw-9v-ExQ" secondAttribute="bottom" id="vV8-jP-qge"/>
+                        <constraint firstItem="n3p-yR-4xc" firstAttribute="leading" secondItem="5rw-9v-ExQ" secondAttribute="leading" id="xaM-Xe-fnF"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLz-36-0xz" customClass="GradientView" customModule="Photo_Editor" customModuleProvider="target">
