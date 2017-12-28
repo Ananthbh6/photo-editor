@@ -39,6 +39,8 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
+    @IBOutlet weak var filtersCollectionView: UICollectionView!
+    
     public var image: UIImage?
     /**
      Array of Stickers -UIImage- that the user will choose from
@@ -71,6 +73,40 @@ public final class PhotoEditorViewController: UIViewController {
     
     
     var stickersViewController: StickersViewController!
+    
+    //filters
+    
+    let filterNameList = [
+        "No Filter",
+        "CIPhotoEffectChrome",
+        "CIPhotoEffectFade",
+        "CIPhotoEffectInstant",
+        "CIPhotoEffectMono",
+        "CIPhotoEffectNoir",
+        "CIPhotoEffectProcess",
+        "CIPhotoEffectTonal",
+        "CIPhotoEffectTransfer",
+        "CILinearToSRGBToneCurve",
+        "CISRGBToneCurveToLinear"
+    ]
+    
+    let filterDisplayNameList = [
+        "Normal",
+        "Chrome",
+        "Fade",
+        "Instant",
+        "Mono",
+        "Noir",
+        "Process",
+        "Tonal",
+        "Transfer",
+        "Tone",
+        "Linear"
+    ]
+    
+    var filterIndex = 0
+    let context = CIContext(options: nil)
+    var smallImage: UIImage?
 
     //Register Custom font before we load XIB
     public override func loadView() {
@@ -100,12 +136,13 @@ public final class PhotoEditorViewController: UIViewController {
                                                name: .UIKeyboardWillChangeFrame, object: nil)
         
         
-        configureCollectionView()
+        configureColorsCollectionView()
+        configureFiltersCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
     }
     
-    func configureCollectionView() {
+    func configureColorsCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 30, height: 30)
         layout.scrollDirection = .horizontal
@@ -123,6 +160,12 @@ public final class PhotoEditorViewController: UIViewController {
         colorsCollectionView.register(
             UINib(nibName: "ColorCollectionViewCell", bundle: Bundle(for: ColorCollectionViewCell.self)),
             forCellWithReuseIdentifier: "ColorCollectionViewCell")
+    }
+    
+    func configureFiltersCollectionView() {
+        filtersCollectionView.delegate = self
+        filtersCollectionView.dataSource = self
+        filtersCollectionView.register(UINib(nibName: "FiltersCollectionViewCell", bundle: Bundle(for: FiltersCollectionViewCell.self)), forCellWithReuseIdentifier: "filterCollectionViewCell")
     }
     
     func setImageView(image: UIImage) {

@@ -45,6 +45,10 @@
 		059EA71D1EACB8790072C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059EA71C1EACB8790072C0FE /* AppDelegate.swift */; };
 		059EA7241EACB8790072C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7231EACB8790072C0FE /* Assets.xcassets */; };
 		059EA7271EACB8790072C0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7251EACB8790072C0FE /* LaunchScreen.storyboard */; };
+		4EBFF2031FF504F5002F1EC4 /* PhotoEditor+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFF2021FF504F5002F1EC4 /* PhotoEditor+Filters.swift */; };
+		4EBFF2061FF50594002F1EC4 /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFF2041FF50594002F1EC4 /* FiltersCollectionViewCell.swift */; };
+		4EBFF2071FF50594002F1EC4 /* FiltersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFF2051FF50594002F1EC4 /* FiltersCollectionViewCell.xib */; };
+		4EBFF2091FF505A9002F1EC4 /* PhotoEditor+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBFF2081FF505A9002F1EC4 /* PhotoEditor+CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		059EA7231EACB8790072C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059EA7261EACB8790072C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059EA7281EACB8790072C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBFF2021FF504F5002F1EC4 /* PhotoEditor+Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+Filters.swift"; sourceTree = "<group>"; };
+		4EBFF2041FF50594002F1EC4 /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EBFF2051FF50594002F1EC4 /* FiltersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersCollectionViewCell.xib; sourceTree = "<group>"; };
+		4EBFF2081FF505A9002F1EC4 /* PhotoEditor+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+CollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,10 @@
 				059EA7231EACB8790072C0FE /* Assets.xcassets */,
 				059EA7251EACB8790072C0FE /* LaunchScreen.storyboard */,
 				059EA7281EACB8790072C0FE /* Info.plist */,
+				4EBFF2021FF504F5002F1EC4 /* PhotoEditor+Filters.swift */,
+				4EBFF2041FF50594002F1EC4 /* FiltersCollectionViewCell.swift */,
+				4EBFF2051FF50594002F1EC4 /* FiltersCollectionViewCell.xib */,
+				4EBFF2081FF505A9002F1EC4 /* PhotoEditor+CollectionView.swift */,
 			);
 			path = "Photo Editor";
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 				0565133C1EF489C0009EA38F /* StickerCollectionViewCell.xib in Resources */,
 				056513371EF489C0009EA38F /* icomoon.ttf in Resources */,
 				056513381EF489C0009EA38F /* LaunchScreen.storyboard in Resources */,
+				4EBFF2071FF50594002F1EC4 /* FiltersCollectionViewCell.xib in Resources */,
 				056513341EF489C0009EA38F /* StickersViewController.xib in Resources */,
 				056513361EF489C0009EA38F /* EmojiCollectionViewCell.xib in Resources */,
 				056513391EF489C0009EA38F /* PhotoCropEditorBorder.png in Resources */,
@@ -259,6 +272,7 @@
 				0565131D1EF489B4009EA38F /* EmojiCollectionViewCell.swift in Sources */,
 				056513271EF489B4009EA38F /* CropViewController.swift in Sources */,
 				0565134D1EF489CD009EA38F /* PhotoEditor+Font.swift in Sources */,
+				4EBFF2031FF504F5002F1EC4 /* PhotoEditor+Filters.swift in Sources */,
 				0565131C1EF489B4009EA38F /* ColorsCollectionViewDelegate.swift in Sources */,
 				0565131E1EF489B4009EA38F /* EmojisCollectionViewDelegate.swift in Sources */,
 				0565131A1EF489B4009EA38F /* StickersViewController.swift in Sources */,
@@ -267,9 +281,11 @@
 				0565131F1EF489B4009EA38F /* StickerCollectionViewCell.swift in Sources */,
 				056513251EF489B4009EA38F /* CropView.swift in Sources */,
 				0565134A1EF489CD009EA38F /* PhotoEditor+UITextView.swift in Sources */,
+				4EBFF2061FF50594002F1EC4 /* FiltersCollectionViewCell.swift in Sources */,
 				056513241EF489B4009EA38F /* GradientView.swift in Sources */,
 				059EA71D1EACB8790072C0FE /* AppDelegate.swift in Sources */,
 				0565134B1EF489CD009EA38F /* PhotoEditor+Controls.swift in Sources */,
+				4EBFF2091FF505A9002F1EC4 /* PhotoEditor+CollectionView.swift in Sources */,
 				056513211EF489B4009EA38F /* UIImageView+Alpha.swift in Sources */,
 				056513291EF489B4009EA38F /* ResizeControl.swift in Sources */,
 			);

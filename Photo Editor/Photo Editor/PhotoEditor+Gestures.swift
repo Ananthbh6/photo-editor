@@ -228,4 +228,37 @@ extension PhotoEditorViewController : UIGestureRecognizerDelegate  {
         }
         return imageviews
     }
+    
+    // filters
+    
+    @objc func imageViewDidSwipeLeft() {
+        if filterIndex == filterNameList.count - 1 {
+            filterIndex = 0
+            imageView?.image = image
+        } else {
+            filterIndex += 1
+        }
+        if filterIndex != 0 {
+            applyFilter()
+        }
+        updateCellFont()
+        scrollCollectionViewToIndex(itemIndex: filterIndex)
+    }
+    
+    @objc func imageViewDidSwipeRight() {
+        if filterIndex == 0 {
+            filterIndex = filterNameList.count - 1
+        } else {
+            filterIndex -= 1
+        }
+        if filterIndex != 0 {
+            applyFilter()
+        } else {
+            imageView?.image = image
+        }
+        updateCellFont()
+        scrollCollectionViewToIndex(itemIndex: filterIndex)
+    }
+
+    
 }
