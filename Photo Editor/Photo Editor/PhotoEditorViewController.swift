@@ -16,7 +16,8 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     //To hold the drawings and stickers
     @IBOutlet weak var canvasImageView: UIImageView!
-
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var topToolbar: UIView!
     @IBOutlet weak var bottomToolbar: UIView!
 
@@ -111,7 +112,7 @@ public final class PhotoEditorViewController: UIViewController {
     public override func loadView() {
         registerFont()
         super.loadView()
-        smallImage = image!
+        smallImage = resizeImage(image: image!)
     }
     
     override public func viewDidLoad() {
@@ -170,8 +171,6 @@ public final class PhotoEditorViewController: UIViewController {
     
     func setImageView(image: UIImage) {
         imageView.image = image
-  //      let size = image.suitableSize(widthLimit: UIScreen.main.bounds.width)
- //       imageViewHeightConstraint.constant = (size?.height)!
     }
     
     func hideToolbar(hide: Bool) {

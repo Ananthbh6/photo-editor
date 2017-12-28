@@ -17,8 +17,6 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
         }
         
         cell.imageView.image = filteredImage
-        cell.filterNameLabel.text = filterDisplayNameList[indexPath.row]
-        updateCellFont()
         return cell
     }
     
@@ -33,31 +31,7 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
         } else {
             imageView?.image = image
         }
-        updateCellFont()
         scrollCollectionViewToIndex(itemIndex: indexPath.item)
-    }
-    
-    func updateCellFont() {
-        // update font of selected cell
-        if let selectedCell = filtersCollectionView?.cellForItem(at: IndexPath(row: filterIndex, section: 0)) {
-            let cell = selectedCell as! FiltersCollectionViewCell
-            cell.filterNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        }
-        
-        for i in 0...filterNameList.count - 1 {
-            if i != filterIndex {
-                // update nonselected cell font
-                if let unselectedCell = filtersCollectionView?.cellForItem(at: IndexPath(row: i, section: 0)) {
-                    let cell = unselectedCell as! FiltersCollectionViewCell
-                    if #available(iOS 8.2, *) {
-                        cell.filterNameLabel.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.thin)
-                    } else {
-                        // Fallback on earlier versions
-                        cell.filterNameLabel.font = UIFont.systemFont(ofSize: 14.0)
-                    }
-                }
-            }
-        }
     }
     
     func scrollCollectionViewToIndex(itemIndex: Int) {
