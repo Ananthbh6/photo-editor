@@ -112,6 +112,7 @@ public final class PhotoEditorViewController: UIViewController {
     public override func loadView() {
         registerFont()
         super.loadView()
+        smallImage = resizeImage(image: image!)
     }
     
     override public func viewDidLoad() {
