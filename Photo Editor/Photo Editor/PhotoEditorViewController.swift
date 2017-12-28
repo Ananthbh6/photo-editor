@@ -16,7 +16,6 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     //To hold the drawings and stickers
     @IBOutlet weak var canvasImageView: UIImageView!
-    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var topToolbar: UIView!
     @IBOutlet weak var bottomToolbar: UIView!

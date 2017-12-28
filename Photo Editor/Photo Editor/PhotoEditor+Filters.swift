@@ -47,21 +47,5 @@ extension PhotoEditorViewController {
         UIGraphicsEndImageContext()
         return resizedImage!
     }
-    
-    @objc @IBAction func closeButtonTapped() {
-        if let delegate = self.photoEditorDelegate {
-            delegate.canceledEditing()
-        }
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @objc @IBAction func doneButtontapped() {
-        if let delegate = self.photoEditorDelegate {
-            let size = imageView.image?.suitableSize(widthLimit: UIScreen.main.bounds.width)
-            imageViewHeightConstraint.constant = (size?.height)!
-            delegate.doneEditing(image: imageView.image!)
-        }
-        dismiss(animated: true, completion: nil)
-    }
 }
 
