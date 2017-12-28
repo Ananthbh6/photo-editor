@@ -30,7 +30,6 @@
                 <outlet property="drawButton" destination="Qm4-f6-DBr" id="yHl-a1-GgN"/>
                 <outlet property="filtersCollectionView" destination="p4S-LA-cNH" id="NKT-Sc-HyL"/>
                 <outlet property="imageView" destination="5rw-9v-ExQ" id="5lP-en-DGc"/>
-                <outlet property="imageViewHeightConstraint" destination="DdY-qb-dfp" id="ZY9-Em-cs4"/>
                 <outlet property="saveButton" destination="mW4-Jz-sic" id="1Uj-nU-EU1"/>
                 <outlet property="shareButton" destination="zlw-H0-WcJ" id="OZv-z0-8s8"/>
                 <outlet property="stickerButton" destination="PLX-iy-2Rc" id="tzt-tW-R1r"/>
@@ -46,16 +45,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-ZS-dct" userLabel="canvas">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="443"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="453"/>
                     <subviews>
                         <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-9v-ExQ">
-                            <rect key="frame" x="0.0" y="-112" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="5" width="375" height="443"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="667" id="DdY-qb-dfp"/>
+                                <constraint firstAttribute="height" constant="443" id="JcD-0s-VKf"/>
                             </constraints>
                         </imageView>
                         <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-yR-4xc">
-                            <rect key="frame" x="0.0" y="-112" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="5" width="375" height="443"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -293,11 +292,11 @@
                         <constraint firstAttribute="trailing" secondItem="GaQ-XR-asZ" secondAttribute="trailing" id="ZAL-PE-sPi"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-LA-cNH">
-                    <rect key="frame" x="0.0" y="443" width="375" height="164"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-LA-cNH">
+                    <rect key="frame" x="0.0" y="443" width="375" height="154"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="164" id="kee-Bv-rMy"/>
+                        <constraint firstAttribute="height" constant="154" id="kee-Bv-rMy"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JVQ-AA-9bw">
                         <size key="itemSize" width="120" height="164"/>

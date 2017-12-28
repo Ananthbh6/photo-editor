@@ -51,7 +51,7 @@ extension PhotoEditorViewController {
 
     @IBAction func textButtonTapped(_ sender: Any) {
         isTyping = true
-        let textView = UITextView(frame: CGRect(x: 0, y: canvasImageView.center.y + 30,
+        let textView = UITextView(frame: CGRect(x: 0, y: canvasImageView.center.y + 60,
                                                 width: UIScreen.main.bounds.width, height: 30))
         
         textView.textAlignment = .center
