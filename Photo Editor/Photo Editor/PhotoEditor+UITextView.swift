@@ -17,8 +17,7 @@ extension PhotoEditorViewController: UITextViewDelegate {
         
         let textColor = color
         
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
+        UIGraphicsBeginImageContext(image.size)
         
         let textFontAttributes = [
             NSAttributedStringKey.font: textFont,
@@ -42,7 +41,9 @@ extension PhotoEditorViewController: UITextViewDelegate {
             let oldFrame = textView.frame
             let sizeToFit = textView.sizeThatFits(CGSize(width: oldFrame.width, height:CGFloat.greatestFiniteMagnitude))
             textView.frame.size = CGSize(width: oldFrame.width, height: sizeToFit.height)
+            self.textView = textView
         }
+        self.textView = textView
     }
     public func textViewDidBeginEditing(_ textView: UITextView) {
         isTyping = true

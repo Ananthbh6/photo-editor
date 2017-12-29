@@ -112,8 +112,18 @@ extension PhotoEditorViewController {
             }
         }
         
-        let image = textToImage(drawText: textView.text, inImage: self.image, atPoint: point, color: textColor, font: self.lastTextViewFont)
-        photoEditorDelegate?.doneEditing(image: image)
+        if let text = textView.text as? NSString {
+            let range = text.range(of: textView.text)
+            let start = textView.position(from: textView.beginningOfDocument, offset: range.location)
+            let end = textView.position(from: start!, offset: range.length)
+            let tRange = textView.textRange(from: start!, to: end!)
+            let rect = textView.firstRect(for: tRange!)
+            
+            let image = textToImage(drawText: textView.text, inImage: self.image, atPoint: rect.origin, color: textColor, font: self.lastTextViewFont)
+            photoEditorDelegate?.doneEditing(image: image)
+        } else {
+            photoEditorDelegate?.doneEditing(image: imageView.image!)
+        }
         self.dismiss(animated: true, completion: nil)
     }
 
