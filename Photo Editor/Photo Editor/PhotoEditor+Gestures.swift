@@ -241,6 +241,7 @@ extension PhotoEditorViewController : UIGestureRecognizerDelegate  {
         if filterIndex != 0 {
             applyFilter()
         }
+        updateCellFont()
         scrollCollectionViewToIndex(itemIndex: filterIndex)
     }
     
@@ -255,6 +256,7 @@ extension PhotoEditorViewController : UIGestureRecognizerDelegate  {
         } else {
             imageView?.image = image
         }
+        updateCellFont()
         scrollCollectionViewToIndex(itemIndex: filterIndex)
     }
 

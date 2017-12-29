@@ -10,6 +10,7 @@ import UIKit
 
 class FiltersCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var filterNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -47,13 +47,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-ZS-dct" userLabel="canvas">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="497"/>
                     <subviews>
                         <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-9v-ExQ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="497"/>
                         </imageView>
                         <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-yR-4xc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="497"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -306,7 +306,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-LA-cNH">
-                    <rect key="frame" x="0.0" y="510.5" width="375" height="86.5"/>
+                    <rect key="frame" x="0.0" y="497" width="375" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JVQ-AA-9bw">
                         <size key="itemSize" width="120" height="120"/>
@@ -327,7 +327,7 @@
                 <constraint firstItem="3MS-N5-3xY" firstAttribute="top" secondItem="HPk-Bg-V0q" secondAttribute="top" id="Fj6-PW-wbF"/>
                 <constraint firstAttribute="trailing" secondItem="3MS-N5-3xY" secondAttribute="trailing" id="M86-Ia-XcZ"/>
                 <constraint firstItem="rLz-36-0xz" firstAttribute="top" secondItem="HPk-Bg-V0q" secondAttribute="top" id="RYD-1T-XNJ"/>
-                <constraint firstItem="p4S-LA-cNH" firstAttribute="height" secondItem="HPk-Bg-V0q" secondAttribute="height" multiplier="0.13" id="Rka-OO-ugT"/>
+                <constraint firstItem="p4S-LA-cNH" firstAttribute="height" secondItem="HPk-Bg-V0q" secondAttribute="height" multiplier="0.15" id="Rka-OO-ugT"/>
                 <constraint firstAttribute="trailing" secondItem="ZGa-1B-gkO" secondAttribute="trailing" id="SbH-L6-vj9"/>
                 <constraint firstItem="yAt-sK-1nK" firstAttribute="centerX" secondItem="HPk-Bg-V0q" secondAttribute="centerX" id="Viz-8c-pzk"/>
                 <constraint firstItem="87h-1G-t5q" firstAttribute="top" secondItem="p4S-LA-cNH" secondAttribute="bottom" constant="10" id="WIR-g9-MSc"/>

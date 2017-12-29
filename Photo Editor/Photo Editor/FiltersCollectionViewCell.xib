@@ -19,19 +19,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrQ-Bf-o8E">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-hb-Ptz">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <rect key="frame" x="0.0" y="20.5" width="120" height="99.5"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="jrQ-Bf-o8E" secondAttribute="trailing" id="AAG-se-6gD"/>
+                <constraint firstItem="jrQ-Bf-o8E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BVP-b2-JxK"/>
                 <constraint firstAttribute="trailing" secondItem="9r1-hb-Ptz" secondAttribute="trailing" id="JP6-9i-Y5L"/>
+                <constraint firstItem="jrQ-Bf-o8E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Yls-sz-Uu8"/>
                 <constraint firstItem="9r1-hb-Ptz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kNu-cr-dNw"/>
                 <constraint firstAttribute="bottom" secondItem="9r1-hb-Ptz" secondAttribute="bottom" id="pdN-yX-Lyk"/>
-                <constraint firstItem="9r1-hb-Ptz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x65-Kb-cip"/>
+                <constraint firstItem="9r1-hb-Ptz" firstAttribute="top" secondItem="jrQ-Bf-o8E" secondAttribute="bottom" id="rfr-rH-tzx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="filterNameLabel" destination="jrQ-Bf-o8E" id="3vd-96-Bex"/>
                 <outlet property="imageView" destination="9r1-hb-Ptz" id="elQ-Ra-aX9"/>
             </connections>
         </collectionViewCell>
