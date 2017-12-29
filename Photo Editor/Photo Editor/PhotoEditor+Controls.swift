@@ -112,7 +112,7 @@ extension PhotoEditorViewController {
             }
         }
         
-        if let text = textView.text as? NSString {
+        if let text = textView.text as NSString?, textView.text.count > 0 {
             let range = text.range(of: textView.text)
             let start = textView.position(from: textView.beginningOfDocument, offset: range.location)
             let end = textView.position(from: start!, offset: range.length)
