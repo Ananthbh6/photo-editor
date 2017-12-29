@@ -13,7 +13,10 @@ extension UIView {
      Convert UIView to UIImage
      */
     func toImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions((self.superview?.bounds.size)!, self.isOpaque, 0.0)
+        let width = (self.superview?.bounds.size.width)! * 0.8
+        let height = (self.superview?.bounds.size.height)! * 0.8
+        let size = CGSize(width: width, height: height)
+        UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0.0)
         self.drawHierarchy(in: (self.superview?.bounds)!, afterScreenUpdates: false)
         let snapshotImageFromMyView = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
