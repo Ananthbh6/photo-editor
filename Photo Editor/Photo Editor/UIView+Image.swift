@@ -14,7 +14,7 @@ extension UIView {
      */
     func toImage() -> UIImage {
         let width = (self.superview?.bounds.size.width)!
-        let height = (self.superview?.bounds.size.height)! * 0.8
+        let height = (self.superview?.bounds.size.height)! * 0.75
         let size = CGSize(width: width, height: height)
         UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0.0)
         self.drawHierarchy(in: (self.superview?.bounds)!, afterScreenUpdates: false)

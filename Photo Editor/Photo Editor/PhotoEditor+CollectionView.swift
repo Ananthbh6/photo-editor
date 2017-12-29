@@ -24,6 +24,13 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
         return filterNameList.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = CGFloat(120.0)
+        let height = self.filtersCollectionView.frame.height
+        let size = CGSize(width: width, height: height)
+        return size
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         filterIndex = indexPath.row
         if filterIndex != 0 {

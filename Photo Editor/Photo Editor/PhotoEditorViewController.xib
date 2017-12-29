@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -46,13 +47,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-ZS-dct" userLabel="canvas">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
                     <subviews>
                         <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-9v-ExQ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
                         </imageView>
                         <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-yR-4xc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -85,11 +86,12 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puz-Dw-IWl">
                                     <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="30"/>
                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <size key="titleShadowOffset" width="1" height="0.0"/>
-                                    <state key="normal" image="rotate-32">
+                                    <state key="normal" title="↻">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
                                         <action selector="rotateButtonTapped:" destination="-1" eventType="touchUpInside" id="qGT-ow-LBU"/>
@@ -304,11 +306,8 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-LA-cNH">
-                    <rect key="frame" x="0.0" y="477" width="375" height="120"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="kee-Bv-rMy"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="510.5" width="375" height="86.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JVQ-AA-9bw">
                         <size key="itemSize" width="120" height="120"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -328,6 +327,7 @@
                 <constraint firstItem="3MS-N5-3xY" firstAttribute="top" secondItem="HPk-Bg-V0q" secondAttribute="top" id="Fj6-PW-wbF"/>
                 <constraint firstAttribute="trailing" secondItem="3MS-N5-3xY" secondAttribute="trailing" id="M86-Ia-XcZ"/>
                 <constraint firstItem="rLz-36-0xz" firstAttribute="top" secondItem="HPk-Bg-V0q" secondAttribute="top" id="RYD-1T-XNJ"/>
+                <constraint firstItem="p4S-LA-cNH" firstAttribute="height" secondItem="HPk-Bg-V0q" secondAttribute="height" multiplier="0.13" id="Rka-OO-ugT"/>
                 <constraint firstAttribute="trailing" secondItem="ZGa-1B-gkO" secondAttribute="trailing" id="SbH-L6-vj9"/>
                 <constraint firstItem="yAt-sK-1nK" firstAttribute="centerX" secondItem="HPk-Bg-V0q" secondAttribute="centerX" id="Viz-8c-pzk"/>
                 <constraint firstItem="87h-1G-t5q" firstAttribute="top" secondItem="p4S-LA-cNH" secondAttribute="bottom" constant="10" id="WIR-g9-MSc"/>
@@ -350,7 +350,4 @@
             </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="rotate-32" width="16" height="16"/>
-    </resources>
 </document>
