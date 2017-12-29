@@ -27,8 +27,9 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let item = self.filtersCollectionView.frame.height
-        let size = CGSize(width: item, height: item)
+        let height = self.filtersCollectionView.frame.height
+        let width = height * 0.731707
+        let size = CGSize(width: width, height: height)
         return size
     }
     
