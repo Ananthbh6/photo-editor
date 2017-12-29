@@ -55,9 +55,8 @@ extension PhotoEditorViewController {
 
     @IBAction func textButtonTapped(_ sender: Any) {
         isTyping = true
-        let textView = UITextView(frame: CGRect(x: 0, y: canvasImageView.center.y + 60,
+        textView = UITextView(frame: CGRect(x: 0, y: canvasImageView.center.y + 60,
                                                 width: UIScreen.main.bounds.width, height: 30))
-        
         textView.textAlignment = .center
         textView.font = UIFont(name: "Helvetica", size: 30)
         textView.textColor = textColor
@@ -105,8 +104,9 @@ extension PhotoEditorViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        let img = self.canvasView.toImage()
-        photoEditorDelegate?.doneEditing(image: img)
+        let point = CGPoint(x: textView.frame.origin.x, y: textView.frame.origin.y)
+        let image = textToImage(drawText: textView.text, inImage: self.image!, atPoint: point, color: textColor, font: self.lastTextViewFont!)
+        photoEditorDelegate?.doneEditing(image: image)
         self.dismiss(animated: true, completion: nil)
     }
 

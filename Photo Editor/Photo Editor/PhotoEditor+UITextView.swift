@@ -71,8 +71,6 @@ extension PhotoEditorViewController: UITextViewDelegate {
                         textView.transform = self.lastTextViewTransform!
                         textView.center = self.lastTextViewTransCenter!
         }, completion: nil)
-       self.image = textToImage(drawText: textView.text, inImage: self.image!, atPoint: textView.frame.origin, color: textColor, font: self.lastTextViewFont!)
-        self.imageView.image = image
     }
     
 }
