@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCollectionViewCell", for: indexPath) as! FiltersCollectionViewCell
         var filteredImage = smallImage
@@ -26,7 +26,7 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
         return filterNameList.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = self.filtersCollectionView.frame.height
         let width = height * 0.731707
         let size = CGSize(width: width, height: height)
