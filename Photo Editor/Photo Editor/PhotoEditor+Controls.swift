@@ -104,8 +104,15 @@ extension PhotoEditorViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        let point = CGPoint(x: textView.frame.origin.x, y: textView.frame.origin.y)
-        let image = textToImage(drawText: textView.text, inImage: self.image!, atPoint: point, color: textColor, font: self.lastTextViewFont!)
+        var point = CGPoint()
+        for tView in view.subviews {
+            if tView is UITextView {
+                let finalTextView = view as! UITextView
+                point = finalTextView.frame.origin
+            }
+        }
+        
+        let image = textToImage(drawText: textView.text, inImage: self.image, atPoint: point, color: textColor, font: self.lastTextViewFont)
         photoEditorDelegate?.doneEditing(image: image)
         self.dismiss(animated: true, completion: nil)
     }

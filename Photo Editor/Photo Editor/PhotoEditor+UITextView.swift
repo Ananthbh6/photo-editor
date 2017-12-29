@@ -11,9 +11,11 @@ import UIKit
 
 extension PhotoEditorViewController: UITextViewDelegate {
     
-    func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint, color: UIColor, font: UIFont) -> UIImage {
+    func textToImage(drawText text: String, inImage image: UIImage?, atPoint point: CGPoint, color: UIColor, font: UIFont?) -> UIImage {
+        
+        guard let textFont = font, let image = image else { return imageView.image! }
+        
         let textColor = color
-        let textFont = font
         
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
