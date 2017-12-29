@@ -13,7 +13,7 @@ extension UIView {
      Convert UIView to UIImage
      */
     func toImage() -> UIImage {
-        let width = (self.superview?.bounds.size.width)! * 0.8
+        let width = (self.superview?.bounds.size.width)!
         let height = (self.superview?.bounds.size.height)! * 0.8
         let size = CGSize(width: width, height: height)
         UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0.0)
