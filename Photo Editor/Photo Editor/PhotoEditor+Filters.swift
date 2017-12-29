@@ -30,7 +30,7 @@ extension PhotoEditorViewController {
         filter?.setValue(sourceImage, forKey: kCIInputImageKey)
         
         // 4 - output filtered image as cgImage with dimension.
-        let outputCGImage = context.createCGImage((filter?.outputImage!)!, from: (self.imageView.bounds))
+        let outputCGImage = context.createCGImage((filter?.outputImage!)!, from: (filter?.outputImage?.extent)!)
         
         // 5 - convert filtered CGImage to UIImage
         let filteredImage = UIImage(cgImage: outputCGImage!)
