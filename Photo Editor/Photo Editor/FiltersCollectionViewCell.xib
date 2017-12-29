@@ -26,20 +26,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-hb-Ptz">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-hb-Ptz">
                         <rect key="frame" x="0.0" y="18" width="70" height="72"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="9r1-hb-Ptz" secondAttribute="trailing" id="2Gg-ts-Pj8"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="9r1-hb-Ptz" secondAttribute="bottom" id="4lF-Pa-aSX"/>
                 <constraint firstItem="jrQ-Bf-o8E" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.2" id="F07-jw-Bw4"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="9r1-hb-Ptz" secondAttribute="bottom" id="GyF-dj-sq3"/>
-                <constraint firstItem="9r1-hb-Ptz" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="RiU-pC-IQI"/>
                 <constraint firstItem="jrQ-Bf-o8E" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="S1a-g3-KB9"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="jrQ-Bf-o8E" secondAttribute="trailing" id="Zqr-DS-Z5F"/>
                 <constraint firstItem="jrQ-Bf-o8E" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="f8r-R7-Xdr"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="9r1-hb-Ptz" secondAttribute="trailing" id="qPp-im-1Xp"/>
-                <constraint firstItem="9r1-hb-Ptz" firstAttribute="top" secondItem="jrQ-Bf-o8E" secondAttribute="bottom" id="rfr-rH-tzx"/>
+                <constraint firstItem="9r1-hb-Ptz" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="iq2-jD-In1"/>
+                <constraint firstItem="9r1-hb-Ptz" firstAttribute="top" secondItem="jrQ-Bf-o8E" secondAttribute="bottom" id="qy7-p7-O47"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>

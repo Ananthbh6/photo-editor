@@ -34,7 +34,7 @@ extension PhotoEditorViewController {
         
         // 5 - convert filtered CGImage to UIImage
         let filteredImage = UIImage(cgImage: outputCGImage!)
-        
+        self.image = filteredImage
         return filteredImage
     }
     
