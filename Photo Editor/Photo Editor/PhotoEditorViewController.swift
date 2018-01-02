@@ -171,7 +171,7 @@ public final class PhotoEditorViewController: UIViewController {
     }
     
     func setImageView(image: UIImage) {
-        imageView.image = image
+        imageView.image = self.fixOrientation(img: image)
     }
     
     func hideToolbar(hide: Bool) {
