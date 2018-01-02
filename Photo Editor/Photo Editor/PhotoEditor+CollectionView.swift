@@ -36,7 +36,7 @@ extension PhotoEditorViewController: UICollectionViewDataSource, UICollectionVie
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         filterIndex = indexPath.row
         if filterIndex != 0 {
-            applyFilter()
+            imageView.image = appplyFilter()
         } else {
             imageView?.image = image
         }

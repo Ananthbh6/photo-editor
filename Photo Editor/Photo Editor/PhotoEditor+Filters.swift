@@ -10,12 +10,10 @@ import UIKit
 
 extension PhotoEditorViewController {
     
-    func applyFilter() {
+    func appplyFilter() -> UIImage? {
         let filterName = filterNameList[filterIndex]
-        if let image = self.image {
-            let filteredImage = createFilteredImage(filterName: filterName, image: image)
-            imageView?.image = filteredImage
-        }
+        guard let image = self.image else { return nil }
+        return createFilteredImage(filterName: filterName, image: image)
     }
     
     func createFilteredImage(filterName: String, image: UIImage) -> UIImage {
@@ -34,7 +32,6 @@ extension PhotoEditorViewController {
         
         // 5 - convert filtered CGImage to UIImage
         let filteredImage = UIImage(cgImage: outputCGImage!)
-        self.image = filteredImage
         return filteredImage
     }
     
