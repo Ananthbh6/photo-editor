@@ -10,7 +10,7 @@ import UIKit
 
 extension PhotoEditorViewController {
     
-    func appplyFilter() -> UIImage? {
+    func applyFilter() -> UIImage? {
         let filterName = filterNameList[filterIndex]
         guard let image = self.image else { return nil }
         return createFilteredImage(filterName: filterName, image: image)

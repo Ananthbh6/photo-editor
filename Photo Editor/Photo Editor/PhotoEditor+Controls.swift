@@ -115,7 +115,7 @@ extension PhotoEditorViewController {
         }
         
         if filterIndex != 0 {
-            finalImage = appplyFilter()!
+            finalImage = applyFilter()!
         } else {
             finalImage = self.image!
         }
