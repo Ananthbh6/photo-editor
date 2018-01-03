@@ -32,7 +32,7 @@ extension PhotoEditorViewController {
         
         // 5 - convert filtered CGImage to UIImage
         let filteredImage = UIImage(cgImage: outputCGImage!)
-        return filteredImage
+        return fixOrientation(img: filteredImage)
     }
     
     func fixOrientation(img: UIImage) -> UIImage {
