@@ -29,6 +29,7 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var colorPickerView: UIView!
     @IBOutlet weak var colorPickerViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var canvasViewBottomConstraint: NSLayoutConstraint!
     //Controls
     @IBOutlet weak var rotateButton: UIButton!
     @IBOutlet weak var cropButton: UIButton!

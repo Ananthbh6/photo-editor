@@ -105,6 +105,10 @@ extension PhotoEditorViewController {
     
     @IBAction func continueButtonPressed(_ sender: Any) {
         self.filtersCollectionView.isHidden = true
+        self.view.removeConstraint(canvasViewBottomConstraint)
+        
+        self.view.addConstraint(NSLayoutConstraint(item: self.canvasView, attribute: .bottom, relatedBy: .equal, toItem: bottomLayoutGuide, attribute:.top, multiplier: 1, constant: 20))
+        self.view.layoutIfNeeded()
         var finalImage = UIImage()
         if filterIndex != 0 {
             finalImage = applyFilter()!
