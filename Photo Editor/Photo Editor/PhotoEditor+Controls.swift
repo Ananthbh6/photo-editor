@@ -104,26 +104,16 @@ extension PhotoEditorViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
+        self.filtersCollectionView.isHidden = true
         var finalImage = UIImage()
-        
         if filterIndex != 0 {
             finalImage = applyFilter()!
         } else {
             finalImage = self.image!
         }
         
-        if let text = textView.text as NSString?, textView.text.count > 0 {
-            let start = textView.position(from: textView.beginningOfDocument, offset: 0)
-            let end = textView.position(from: textView.beginningOfDocument, offset: 1)
-            let range = textView.textRange(from: start!, to: end!)
-            let rect = textView.firstRect(for: range!)
-            let points = self.textView.frame.origin
-            let a = self.textView.contentOffset
-            let image = textToImage(drawText: textView.text, inImage: finalImage, atPoint: points, color: textColor, font: self.lastTextViewFont)
-            photoEditorDelegate?.doneEditing(image: image)
-        } else {
-            photoEditorDelegate?.doneEditing(image: imageView.image!)
-        }
+        let image = self.canvasView.toImage()
+        photoEditorDelegate?.doneEditing(image: image)
         self.dismiss(animated: true, completion: nil)
     }
 
