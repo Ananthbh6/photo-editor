@@ -11,39 +11,13 @@ import UIKit
 
 extension PhotoEditorViewController: UITextViewDelegate {
     
-    func textToImage(drawText text: String, inImage image: UIImage?, atPoint point: CGPoint, color: UIColor, font: UIFont?) -> UIImage {
-        
-        guard let textFont = font, let image = image else { return imageView.image! }
-        
-        let textColor = color
-        
-        UIGraphicsBeginImageContext(image.size)
-        
-        let textFontAttributes = [
-            NSAttributedStringKey.font: textFont,
-            NSAttributedStringKey.foregroundColor: textColor,
-            ] as [NSAttributedStringKey : Any]
-        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
-        
-        let rect = CGRect(origin: point, size: image.size)
-        text.draw(in: rect, withAttributes: textFontAttributes)
-        
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
-    }
-
-    
     public func textViewDidChange(_ textView: UITextView) {
         let rotation = atan2(textView.transform.b, textView.transform.a)
         if rotation == 0 {
             let oldFrame = textView.frame
             let sizeToFit = textView.sizeThatFits(CGSize(width: oldFrame.width, height:CGFloat.greatestFiniteMagnitude))
             textView.frame.size = CGSize(width: oldFrame.width, height: sizeToFit.height)
-            self.textView = textView
         }
-        self.textView = textView
     }
     public func textViewDidBeginEditing(_ textView: UITextView) {
         isTyping = true

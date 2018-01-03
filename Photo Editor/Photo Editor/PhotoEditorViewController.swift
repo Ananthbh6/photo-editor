@@ -72,8 +72,6 @@ public final class PhotoEditorViewController: UIViewController {
     var imageViewToPan: UIImageView?
     var isTyping: Bool = false
     
-    var textView = UITextView()
-    
     var stickersViewController: StickersViewController!
     
     //filters
