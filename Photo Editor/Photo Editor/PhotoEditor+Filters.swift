@@ -31,23 +31,8 @@ extension PhotoEditorViewController {
         let outputCGImage = context.createCGImage((filter?.outputImage!)!, from: (filter?.outputImage?.extent)!)
         
         // 5 - convert filtered CGImage to UIImage
-        let filteredImage = UIImage(cgImage: outputCGImage!)
-        return fixOrientation(img: filteredImage)
-    }
-    
-    func fixOrientation(img: UIImage) -> UIImage {
-        if (img.imageOrientation == .up) {
-            return img
-        }
-        
-        UIGraphicsBeginImageContextWithOptions(img.size, false, img.scale)
-        let rect = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
-        img.draw(in: rect)
-        
-        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        return normalizedImage
+        let filteredImage = UIImage(cgImage: outputCGImage!, scale: image.scale, orientation: image.imageOrientation)
+        return filteredImage
     }
     
     func resizeImage(image: UIImage) -> UIImage {
