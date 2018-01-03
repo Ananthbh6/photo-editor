@@ -104,15 +104,7 @@ extension PhotoEditorViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
-        var point = CGPoint()
         var finalImage = UIImage()
-        
-        for tView in view.subviews {
-            if tView is UITextView {
-                let finalTextView = view as! UITextView
-                point = finalTextView.frame.origin
-            }
-        }
         
         if filterIndex != 0 {
             finalImage = applyFilter()!
@@ -121,13 +113,13 @@ extension PhotoEditorViewController {
         }
         
         if let text = textView.text as NSString?, textView.text.count > 0 {
-            let range = text.range(of: textView.text)
-            let start = textView.position(from: textView.beginningOfDocument, offset: range.location)
-            let end = textView.position(from: start!, offset: range.length)
-            let tRange = textView.textRange(from: start!, to: end!)
-            let rect = textView.firstRect(for: tRange!)
-            
-            let image = textToImage(drawText: textView.text, inImage: finalImage, atPoint: rect.origin, color: textColor, font: self.lastTextViewFont)
+            let start = textView.position(from: textView.beginningOfDocument, offset: 0)
+            let end = textView.position(from: textView.beginningOfDocument, offset: 1)
+            let range = textView.textRange(from: start!, to: end!)
+            let rect = textView.firstRect(for: range!)
+            let points = self.textView.frame.origin
+            let a = self.textView.contentOffset
+            let image = textToImage(drawText: textView.text, inImage: finalImage, atPoint: points, color: textColor, font: self.lastTextViewFont)
             photoEditorDelegate?.doneEditing(image: image)
         } else {
             photoEditorDelegate?.doneEditing(image: imageView.image!)
