@@ -98,6 +98,9 @@ extension PhotoEditorViewController {
         for subview in canvasImageView.subviews {
             subview.removeFromSuperview()
         }
+        //clear filters
+        imageView.image = self.image
+        self.filterIndex = 0
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
