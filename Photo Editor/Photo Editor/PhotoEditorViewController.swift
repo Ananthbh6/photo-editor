@@ -71,6 +71,41 @@ public final class PhotoEditorViewController: UIViewController {
     
     
     var stickersViewController: StickersViewController!
+    
+    
+    // filters
+    
+    let filterNameList = [
+        "No Filter",
+        "CIPhotoEffectChrome",
+        "CIPhotoEffectFade",
+        "CIPhotoEffectInstant",
+        "CIPhotoEffectMono",
+        "CIPhotoEffectNoir",
+        "CIPhotoEffectProcess",
+        "CIPhotoEffectTonal",
+        "CIPhotoEffectTransfer",
+        "CILinearToSRGBToneCurve",
+        "CISRGBToneCurveToLinear"
+    ]
+    
+    let filterDisplayNameList = [
+        "Normal",
+        "Chrome",
+        "Fade",
+        "Instant",
+        "Mono",
+        "Noir",
+        "Process",
+        "Tonal",
+        "Transfer",
+        "Tone",
+        "Linear"
+    ]
+    
+    var filterIndex = 0
+    let context = CIContext(options: nil)
+    
 
     //Register Custom font before we load XIB
     public override func loadView() {
