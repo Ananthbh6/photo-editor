@@ -12,6 +12,7 @@ import UIKit
 extension PhotoEditorViewController {
     
     @objc func imageViewDidSwipeLeft() {
+        tipView?.dismiss()
         if filterIndex == filterNameList.count - 1 {
             imageView?.image = image
         } else {

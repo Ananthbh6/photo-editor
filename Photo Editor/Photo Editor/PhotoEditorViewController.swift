@@ -38,6 +38,7 @@ public final class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     public var image: UIImage?
     /**
@@ -106,6 +107,8 @@ public final class PhotoEditorViewController: UIViewController {
     var filterIndex = 0
     let context = CIContext(options: nil)
     
+    var tipView: EasyTipView?
+    public var tipViewText = ""
 
     //Register Custom font before we load XIB
     public override func loadView() {
@@ -139,6 +142,28 @@ public final class PhotoEditorViewController: UIViewController {
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
         addSwipeGesturesForFilters()
+    }
+    
+    override public func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showTipView()
+    }
+    
+    override public func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        tipView?.dismiss()
+    }
+    
+    fileprivate func showTipView() {
+        var preferences = EasyTipView.globalPreferences
+        preferences.positioning.bubbleVInset = 10
+        let text = tipViewText
+        tipView = EasyTipView(text: text,
+                              preferences: preferences,
+                              delegate: nil)
+        tipView?.show(animated: true,
+                      forView: continueButton,
+                      withinSuperview: nil)
     }
     
     func addSwipeGesturesForFilters() {

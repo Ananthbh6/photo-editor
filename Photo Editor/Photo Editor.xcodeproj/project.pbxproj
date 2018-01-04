@@ -45,6 +45,7 @@
 		059EA71D1EACB8790072C0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059EA71C1EACB8790072C0FE /* AppDelegate.swift */; };
 		059EA7241EACB8790072C0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7231EACB8790072C0FE /* Assets.xcassets */; };
 		059EA7271EACB8790072C0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059EA7251EACB8790072C0FE /* LaunchScreen.storyboard */; };
+		4E78CE5F1FFE6A5400E16174 /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E78CE5E1FFE6A5400E16174 /* EasyTipView.swift */; };
 		4EA089421FFE42BB00EEDA04 /* PhotoEditor+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA089411FFE42BB00EEDA04 /* PhotoEditor+Filters.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		059EA7231EACB8790072C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059EA7261EACB8790072C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059EA7281EACB8790072C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E78CE5E1FFE6A5400E16174 /* EasyTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
 		4EA089411FFE42BB00EEDA04 /* PhotoEditor+Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoEditor+Filters.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				059EA7251EACB8790072C0FE /* LaunchScreen.storyboard */,
 				059EA7281EACB8790072C0FE /* Info.plist */,
 				4EA089411FFE42BB00EEDA04 /* PhotoEditor+Filters.swift */,
+				4E78CE5E1FFE6A5400E16174 /* EasyTipView.swift */,
 			);
 			path = "Photo Editor";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				056513281EF489B4009EA38F /* UIImage+Crop.swift in Sources */,
 				056513221EF489B4009EA38F /* UIView+Image.swift in Sources */,
+				4E78CE5F1FFE6A5400E16174 /* EasyTipView.swift in Sources */,
 				056513461EF489CD009EA38F /* PhotoEditor+Gestures.swift in Sources */,
 				056513201EF489B4009EA38F /* UIImage+Size.swift in Sources */,
 				056513471EF489CD009EA38F /* PhotoEditor+Drawing.swift in Sources */,
