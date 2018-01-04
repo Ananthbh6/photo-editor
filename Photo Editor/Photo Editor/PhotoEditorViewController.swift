@@ -138,8 +138,20 @@ public final class PhotoEditorViewController: UIViewController {
         configureCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
+        addSwipeGesturesForFilters()
     }
     
+    func addSwipeGesturesForFilters() {
+        let rightSwipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(imageViewDidSwipeRight))
+        rightSwipeRecognizer.direction = .right
+        rightSwipeRecognizer.numberOfTouchesRequired = 1
+        self.canvasView.addGestureRecognizer(rightSwipeRecognizer)
+        
+        let leftSwipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(imageViewDidSwipeLeft))
+        leftSwipeRecognizer.direction = .left
+        leftSwipeRecognizer.numberOfTouchesRequired = 1
+        self.canvasView.addGestureRecognizer(leftSwipeRecognizer)
+    }
     func configureCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 30, height: 30)

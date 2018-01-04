@@ -11,7 +11,7 @@ import UIKit
 
 extension PhotoEditorViewController {
     
-    @IBAction func imageViewDidSwipeLeft() {
+    @objc func imageViewDidSwipeLeft() {
         if filterIndex == filterNameList.count - 1 {
             filterIndex = 0
             imageView?.image = image
@@ -23,7 +23,7 @@ extension PhotoEditorViewController {
         }
     }
     
-    @IBAction func imageViewDidSwipeRight() {
+    @objc func imageViewDidSwipeRight() {
         if filterIndex == 0 {
             filterIndex = filterNameList.count - 1
         } else {
